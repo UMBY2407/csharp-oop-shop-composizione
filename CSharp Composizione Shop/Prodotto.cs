@@ -108,5 +108,17 @@ namespace CSharp_Composizione_Shop
 			Console.WriteLine("Prezzo prodotto (+ iva): " + getPriceWithIva() + " EUR");
 			Console.WriteLine("-------------------------------------------");
 		}
+
+		public string GetProdottoStringa()
+		{
+			setPriceWithIva();
+			string rapprStringa = "Codice prodotto: " + creaCodice() + ", ";
+			rapprStringa += "Nome prodotto: " + this.name + ", ";
+			rapprStringa += "Descrizione del prodotto: " + this.description + ", ";
+			rapprStringa += "Categoria: " + this.categoria + ", ";
+			rapprStringa += "Prezzo prodotto (iva inclusa): " + this.priceWithIva + " EUR";
+
+			return rapprStringa;
+		}
 	}
 }

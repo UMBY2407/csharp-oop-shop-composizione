@@ -20,6 +20,7 @@ namespace CSharp_Composizione_Shop
 			this.nome = nome;
 			this.citta = citta;
 			this.indirizzo = indirizzo;
+			this.numeroCivico = numeroCivico;
 			this.listaProdotti = new List<Prodotto>();
 		}
 
@@ -71,6 +72,17 @@ namespace CSharp_Composizione_Shop
 			rapprStringa += "Numero civico: " + this.numeroCivico + "\n";
             
 			return rapprStringa;
+		}
+
+		public string StampaListaProdotti()
+		{
+			string rapprSringa = "";
+			foreach (Prodotto prodottoScansionato in listaProdotti)
+			{
+				rapprSringa += " - " + prodottoScansionato.GetProdottoStringa() + "\n";
+			}
+			rapprSringa += "\n";
+			return rapprSringa;
 		}
 	}
 }

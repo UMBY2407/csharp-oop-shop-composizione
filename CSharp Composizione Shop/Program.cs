@@ -16,3 +16,6 @@ Prodotto LesPaul = new Prodotto("Gibson Les Paul", "Gibson LesPaul 2020", "Chita
 Guitarshop.aggiungiProdotto(Telecaster);
 Guitarshop.aggiungiProdotto(CordeE);
 Guitarshop.aggiungiProdotto(LesPaul);
+
+infoProdotto = Guitarshop.StampaListaProdotti();
+Console.WriteLine(infoProdotto);
