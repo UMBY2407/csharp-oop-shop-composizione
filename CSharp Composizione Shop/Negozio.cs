@@ -12,7 +12,50 @@ namespace CSharp_Composizione_Shop
 		private string nome;
 		private string citta;
 		private string indirizzo;
-		private string numeroCivico;
-		List<Prodotto> listaProdotti;
+		private int numeroCivico;
+		private List<Prodotto> listaProdotti;
+
+		//COSTRUTTORI
+		public Negozio(string nome, string citta, string indirizzo, int numeroCivico) {
+			this.nome = nome;
+			this.citta = citta;
+			this.indirizzo = indirizzo;
+			this.listaProdotti = new List<Prodotto>();
+		}
+
+		//GETTERS
+		public string getNome() { return nome;}
+		public string getCitta() {  return citta;}
+		public string getIndirizzo() {  return indirizzo;}
+		public int getNumeroCivico() {  return numeroCivico;}
+		public List<Prodotto> GetListaProdotti()
+		{
+			return this.listaProdotti;
+		}
+
+		//SETTERS
+		public void setIndirizzo (string indirizzo)
+		{
+			this.indirizzo = indirizzo;
+		}
+
+		public void setNumeroCivico (int numeroCivico)
+		{
+			this.numeroCivico = numeroCivico;
+		}
+
+		//METODI
+		public void aggiungiProdotto(Prodotto nuovoProdotto)
+		{
+			listaProdotti.Add(nuovoProdotto);
+		}
+
+		public void aggiungiListaProdotti (List<Prodotto> listaProdottiDaAggiungere)
+		{
+			foreach (Prodotto nuovoProdottoDaAggiungere in listaProdotti)
+			{
+				this.listaProdotti.Add(nuovoProdottoDaAggiungere);
+			}
+		}
 	}
 }

@@ -16,6 +16,15 @@ namespace CSharp_Composizione_Shop
 		private float priceWithIva;
 		private int iva;
 
+		//COSTRUTTORI
+		public Prodotto(string nome, string descrizione, float prezzo, int iva) 
+		{
+			this.name = nome;
+			this.description = descrizione;
+			this.price = prezzo;
+			this.iva = iva;
+		}
+
 
 		//GETTER
 		public string getNome()
@@ -40,38 +49,30 @@ namespace CSharp_Composizione_Shop
 
 
 		//SETTER
-		public string setNome()
+		public void setNome(string nome)
 		{
-			Console.Write("Inserisci il nome del prodotto: ");
-			name = Console.ReadLine();
-			return this.name;
+			this.name = nome;
 		}
 
-		public string setDescription()
+		public void setDescription(string descrizione)
 		{
-			Console.Write("Inserisci la descrizione del prodotto: ");
-			description = Console.ReadLine();
-			return this.description;
+			this.description = descrizione;
 		}
 
-		public float setPrezzo()
+		public void setPrezzo(float prezzo)
 		{
-			Console.Write("Inserisci il prezzo del prodotto: ");
-			price = float.Parse(Console.ReadLine());
-			return this.price;
+			this.price = prezzo;
 		}
 
-		public int setIva()
+		public void setIva(int iva)
 		{
-			Console.Write("Inserire l'iva del prodotto: ");
-			iva = int.Parse(Console.ReadLine());
-			return this.iva;
+			
+			this.iva = iva;
 		}
 
-		public float setPriceWithIva()
+		public void setPriceWithIva()
 		{
-			priceWithIva = price + (price / 100) * iva;
-			return this.priceWithIva;
+			this.priceWithIva = price + (price / 100) * iva; ;
 		}
 
 
@@ -83,19 +84,9 @@ namespace CSharp_Composizione_Shop
 			return this.codice;
 		}
 
-
-		public void creaProdotto()
-		{
-			creaCodice();
-			setNome();
-			setDescription();
-			setPrezzo();
-			setIva();
-			setPriceWithIva();
-		}
-
 		public void printProduct()
 		{
+			setPriceWithIva();
 			Console.WriteLine("-------------- PRODOTTO -----------------");
 			Console.WriteLine("Codice prodotto: " + creaCodice());
 			Console.WriteLine("Nome prodotto: " + getNome());
