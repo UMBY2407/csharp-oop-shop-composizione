@@ -39,7 +39,7 @@ namespace CSharp_Composizione_Shop
 			return this.description;
 		}
 
-		public string getCategoia()
+		public string getCategoria()
 		{
 			return this.categoria;
 		}
@@ -103,6 +103,7 @@ namespace CSharp_Composizione_Shop
 			Console.WriteLine("Codice prodotto: " + creaCodice());
 			Console.WriteLine("Nome prodotto: " + getNome());
 			Console.WriteLine("Descrizione prodotto: " + getDescription());
+			Console.WriteLine("Categoria prodotto: " + getCategoria());
 			Console.WriteLine("Prezzo prodotto (iva esclusa): " + getPrice() + " EUR");
 			Console.WriteLine("Prezzo prodotto (+ iva): " + getPriceWithIva() + " EUR");
 			Console.WriteLine("-------------------------------------------");

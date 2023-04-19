@@ -34,6 +34,11 @@ namespace CSharp_Composizione_Shop
 		}
 
 		//SETTERS
+
+		public void setCitta(string citta)
+		{
+			this.citta = citta;
+		}
 		public void setIndirizzo (string indirizzo)
 		{
 			this.indirizzo = indirizzo;
