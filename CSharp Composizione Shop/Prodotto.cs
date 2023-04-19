@@ -12,15 +12,17 @@ namespace CSharp_Composizione_Shop
 		private int codice;
 		private string name;
 		private string description;
+		private string categoria;
 		private float price;
 		private float priceWithIva;
 		private int iva;
 
 		//COSTRUTTORI
-		public Prodotto(string nome, string descrizione, float prezzo, int iva) 
+		public Prodotto(string nome, string descrizione, string categoria, float prezzo, int iva) 
 		{
 			this.name = nome;
 			this.description = descrizione;
+			this.categoria = categoria;
 			this.price = prezzo;
 			this.iva = iva;
 		}
@@ -35,6 +37,11 @@ namespace CSharp_Composizione_Shop
 		public string getDescription()
 		{
 			return this.description;
+		}
+
+		public string getCategoia()
+		{
+			return this.categoria;
 		}
 
 		public float getPrice()
@@ -57,6 +64,11 @@ namespace CSharp_Composizione_Shop
 		public void setDescription(string descrizione)
 		{
 			this.description = descrizione;
+		}
+
+		public void setCategoria(string categoria)
+		{
+			this.categoria = categoria;
 		}
 
 		public void setPrezzo(float prezzo)

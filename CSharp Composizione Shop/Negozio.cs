@@ -57,5 +57,15 @@ namespace CSharp_Composizione_Shop
 				this.listaProdotti.Add(nuovoProdottoDaAggiungere);
 			}
 		}
+
+		public string StampaInfoNegozio()
+		{
+			string rapprStringa = "Nome Negozio: " + this.nome + "\n";
+			rapprStringa += "Città: " + this.citta + "\n";
+			rapprStringa += "Indirizzo: " + this.indirizzo + "\n";
+			rapprStringa += "Numero civico: " + this.numeroCivico + "\n";
+            
+			return rapprStringa;
+		}
 	}
 }
